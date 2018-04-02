@@ -6,5 +6,8 @@ urlpatterns = patterns('',
     # url(r'^$', 'myproject.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),
 
+    url(r'^$', 'cms.views.pagina_inicio'),
+    url(r'^create/(.*)/(.*)$', 'cms.views.createPage'),
+    url(r'^web/(\d+)$', 'cms.views.showContent'),
     url(r'^admin/', include(admin.site.urls)),
 )
